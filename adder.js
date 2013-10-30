@@ -1,12 +1,13 @@
 /*
-*	sub method which subtracts two arguments
-*	Author : Vouhé Clément
+*  sub method which subtracts two arguments
+*  Author : Vouhé Clément
 */
 
-function sub(a){ 
-  return function(b){
-    return a-b;
-  }
+function sub(a) {
+    "use strict";
+    return function (b) {
+        return a - b;
+    };
 }
 
 /*
@@ -19,30 +20,32 @@ sub(2)(2); // 0
 sub(2)(4); // -2
 
 /*
-*	adder method which addition x arguments and return the result
-*	Author : Vouhé Clément
+*  adder method which addition x arguments and return the result
+*  Author : Vouhé Clément
 */
 
-function adder(){
-  var args = Array.prototype.slice.call(arguments); // Recovery of all arguments in a table
-  return function(v){
-    var result = 0;
-    args.forEach(function(value, i){ // ForEach on the table of arguments
-      result+=args[i](v);
-    });
-    return result;
-  }
+function adder() {
+    "use strict";
+    var args = Array.prototype.slice.call(arguments); // Recovery of all arguments in a table
+    return function (v) {
+        var result = 0;
+        args.forEach(function (value) { // ForEach on the table of arguments
+            result += value(v);
+        });
+        return result;
+    };
 }
 
 /*
-*	mult method which multiply two arguments and return the result
-*	Author : François-Guillaume Ribreau
+*  mult method which multiply two arguments and return the result
+*  Author : François-Guillaume Ribreau
 */
 
-function mult(v){
-  return function(e){
-    return v*e;
-  }
+function mult(v) {
+    "use strict";
+    return function (e) {
+        return v * e;
+    };
 }
 
 /*
