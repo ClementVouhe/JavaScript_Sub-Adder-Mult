@@ -1,5 +1,5 @@
 /*
-*	Sub method which subtracts two arguments
+*	sub method which subtracts two arguments
 *	Author : Vouhé Clément
 */
 
@@ -8,6 +8,10 @@ function sub(a){
 		return a-b;
 	}
 }
+
+/*
+*   TEST Sub
+*/
 
 sub(0)(0); // 0
 sub(2)(1); // 1
@@ -40,6 +44,10 @@ function mult(v){
 		return v*e;
 	}
 }
+
+/*
+*   TEST adder
+*/
 
 adder()(0); // 0
 adder()(1); // 0
