@@ -4,9 +4,9 @@
 */
 
 function sub(a){ 
-	return function(b){
-		return a-b;
-	}
+  return function(b){
+    return a-b;
+  }
 }
 
 /*
@@ -24,14 +24,14 @@ sub(2)(4); // -2
 */
 
 function adder(){
-	var args = Array.prototype.slice.call(arguments); // Recovery of all arguments in a table
-	return function(v){
-		var result = 0;
-		args.forEach(function(value, i){ // ForEach on the table of arguments
-			result+=args[i](v);
-		});
-		return result;
-	}
+  var args = Array.prototype.slice.call(arguments); // Recovery of all arguments in a table
+  return function(v){
+    var result = 0;
+    args.forEach(function(value, i){ // ForEach on the table of arguments
+      result+=args[i](v);
+    });
+    return result;
+  }
 }
 
 /*
@@ -40,9 +40,9 @@ function adder(){
 */
 
 function mult(v){
-	return function(e){
-		return v*e;
-	}
+  return function(e){
+    return v*e;
+  }
 }
 
 /*
